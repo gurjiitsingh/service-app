@@ -7,13 +7,7 @@ import { ProductType } from '@/lib/types/productType';
 
 export default function CartLeft() {
     //const { cartData } =  useCartContext();
-    const { cartData } = useContext(CartContext);
-    //console.log("kljjljlkll", cartData.lenght)
-    let total=0; 
-    cartData.forEach((item:ProductType)=>{
-        // total += parseInt(item.quantity) * parseFloat(item.price);
-        total += item.quantity! * parseFloat(item.price);
-    });
+  
   return (
    
         
@@ -54,7 +48,7 @@ export default function CartLeft() {
                 Delivery option at checkout.
               </span> */}
             </div>
-            <div className='text-[1.1rem]'><span className='text-xl'>Subtotal ({cartData.length} items){" "}</span> :${total}.00</div>
+        
             <div className="flex items-center justify-center">
             <Link
       href={{

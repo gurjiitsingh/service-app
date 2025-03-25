@@ -9,8 +9,6 @@ import { HiOutlineChatBubbleBottomCenterText } from "react-icons/hi2";
 import { IoClose } from "react-icons/io5";
 import { FiSettings, FiShoppingCart } from "react-icons/fi";
 import { UseSiteContext } from "@/SiteContext/SiteContext";
-import MiniCartContent from "./MiniCartcontent";
-import { MiniCartSubtotal } from "./MiniSubtotal";
 import ProccedWithEmail from "./components/ProccedWithEmail";
 import { SessionProvider } from "next-auth/react";
 import { useCartContext } from "@/store/CartContext";
@@ -21,7 +19,7 @@ export const SideCart = () => {
   //const [ showEmailForm, setShowEmailForm ] = UseSiteContext();
   const { open, sideBarToggle } = UseSiteContext();
   const { openEmailForm, emailFormToggle, customerEmail } = UseSiteContext();
-  const { cartData } = useCartContext();
+ 
   const ref = useRef(null);
   const router = useRouter();
   useClickAway(ref, () => sideBarToggle(false));
