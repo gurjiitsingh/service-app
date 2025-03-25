@@ -1,7 +1,7 @@
 "use client";
 import { fetchProductByCategoryId } from "@/app/action/productsbase/dbOperation";
 import React, { useEffect, useState } from "react";
-import {  ProductType, TproductSchema } from "@/lib/types/productType";
+import {  ProductType } from "@/lib/types/productType";
 import { useSearchParams } from "next/navigation";
 import { UseSiteContext } from "@/SiteContext/SiteContext";
 import PageProductDetailComponent from "./Components/PageProductDetailComponent";

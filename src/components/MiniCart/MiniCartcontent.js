@@ -11,7 +11,7 @@ const MiniCartContent = () => {
 //   console.log("incart content ---------------", cartData);
   }, [cartData]);
   return (
-    <div className="flex flex-col gap-1 bg-white  flex-1 ">
+    <div className="flex flex-col gap-1 bg-white px-1 flex-1 ">
       {/* <div className="py-1 px-3 border-b">
         <h1 className=" text-[1.1rem]"></h1>
       </div> */}

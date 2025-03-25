@@ -15,6 +15,7 @@ import ProccedWithEmail from "./components/ProccedWithEmail";
 import { SessionProvider } from "next-auth/react";
 import { useCartContext } from "@/store/CartContext";
 import { useRouter } from "next/navigation";
+import SideBarPublic from "../Home/SideBarPublic";
 //import Link from "next/link";
 export const SideCart = () => {
   //const [ showEmailForm, setShowEmailForm ] = UseSiteContext();
@@ -23,7 +24,7 @@ export const SideCart = () => {
   const { cartData } = useCartContext();
   const ref = useRef(null);
   const router = useRouter();
-  useClickAway(ref, () => sideBarToggle());
+  useClickAway(ref, () => sideBarToggle(false));
   // const sideBarToggle = () => setOpen(prev => !prev)
   // function deliveryHandle(){
   //  /// setShowEmailForm((state)=>!state)
@@ -34,13 +35,13 @@ export const SideCart = () => {
   function pickUpHandle() {
     /// setShowEmailForm((state)=>!state)
     // chageDeliveryType("pickup")
-    sideBarToggle();
+    sideBarToggle(ture);
     emailFormToggle(true);
   }
 
   function shopMoreHandle() {
     // setShowEmailForm((state)=>!state)
-    sideBarToggle();
+    sideBarToggle(true);
     router.push("/");
     // chageDeliveryType("pickup")
     // emailFormToggle()
@@ -63,10 +64,10 @@ export const SideCart = () => {
                   ref={ref}
                   aria-label="Sidebar"
                 >
-                  <div className="flex items-center  pt-2 justify-between p-2  rounded-xl  bg-slate-100 ">
-                    <span>Dein Warenkorb</span>
+                  <div className="flex items-center px-2 pt-2 justify-between p-2  rounded-2xl  border ">
+                    <span>Select a service category</span>
                     <button
-                      onClick={sideBarToggle}
+                      onClick={()=>sideBarToggle(false)}
                       className="p-1 border-zinc-800 rounded-xl"
                       aria-label="close sidebar"
                     >
@@ -74,40 +75,7 @@ export const SideCart = () => {
                     </button>
                   </div>
 
-                  <MiniCartContent />
-                  <MiniCartSubtotal />
-                  <div className=" flex flex-col items-center justify-center gap-3 ">
-                    {cartData.length ? (
-                      <button
-                        onClick={() => {
-                          pickUpHandle();
-                        }}
-                        className="w-full mt-5 py-1 text-center bg-red-600 rounded-xl text-white text-[1rem]"
-                      >
-                        {/* Pickup */}
-                        Kasse
-                      </button>
-                    ) : (
-                      <></>
-                    )}
-                    <div className="w-full flex flex-col gap-2 justify-center">
-                      {cartData.length ? (
-                        <></>
-                      ) : (
-                        <div className="min-w-[200px] mt-5 py-1 text-center  rounded-2xl text-[1rem] font-semibold">
-                          Warenkorb ist leer
-                        </div>
-                      )}
-                      <button
-                        onClick={() => {
-                          shopMoreHandle();
-                        }}
-                        className="min-w-[200px] mt-5 py-1 text-center bg-slate-400 rounded-xl text-white text-[1rem]"
-                      >
-                        Mehr einkaufen
-                      </button>
-                    </div>
-                  </div>
+                <SideBarPublic />
                 </motion.div>
               </>
             )}

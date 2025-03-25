@@ -73,9 +73,9 @@ export const BargerMenu = () => {
 }
 
 const items = [
-  { title: 'Heim', Icon: BiHomeSmile, href: '/' },
-  { title: 'Über Uns', Icon: BiUser,href:'/about' },
-  { title: 'Kontakt', Icon: HiOutlineChatBubbleBottomCenterText, href: '/contact' },
+  { title: 'Home', Icon: BiHomeSmile, href: '/' },
+  { title: 'About', Icon: BiUser,href:'/about' },
+  { title: 'Contact', Icon: HiOutlineChatBubbleBottomCenterText, href: '/contact' },
  
 ]
 

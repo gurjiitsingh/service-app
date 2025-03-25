@@ -29,8 +29,11 @@ export default function RootLayout({
         <SiteProvider>
           <CartProvider>
             <BargerMenu />
+           
             <Modal />
+            <SideCart />
             <Header />
+            <div className="container px-2 mx-auto">
             <div className="flex justify-center pt-10">
               <div className="hidden lg:block lg:w-[350px]  mr-3">
                 <SideBarPublic />
@@ -41,6 +44,7 @@ export default function RootLayout({
             <Footer />
             <div className="sticky  bottom-4 flex justify-end pr-3 z-50">
               {/* <Cart /> */}
+            </div>
             </div>
           </CartProvider>
         </SiteProvider>
