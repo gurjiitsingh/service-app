@@ -1,5 +1,5 @@
 import {
-  fetchProductByCategoryId,
+  //fetchProductByCategoryId,
   fetchProducts,
 } from "@/app/action/productsbase/dbOperation";
 import { ProductType } from "@/lib/types/productType";

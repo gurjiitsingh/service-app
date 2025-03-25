@@ -5,8 +5,8 @@ export default function Hero() {
    <div className='flex justify-center'>
 
 <img
-            src='/hero-6.png'
-            className="w-full rounded-2xl"
+            src='/hero-services.jpg'
+            className="w-full rounded-xl"
           />
 
 </div>

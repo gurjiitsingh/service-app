@@ -9,11 +9,11 @@ export default function Footer() {
         <div className="lg:w-1/3 flex gap-2">
           <div className="flex items-center justify-center w-12 h-12 rounded-full dark:bg-violet-600">
             <Link href="/">
-              <img className="h-12 md:h-12" src="/logo.webp" alt="Logo" />
+              <img className="h-12 md:h-12" src="/logo.svg" alt="Logo" />
             </Link>
           </div>
           <span className="self-center text-2xl font-semibold">
-            Masala GF
+            uk Services
           </span>
         </div>
         <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">

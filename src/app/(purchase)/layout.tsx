@@ -5,8 +5,8 @@ import Cart from "@/components/CartBottom/CartBottom"
 
 
 export const metadata: Metadata = {
-  title: "Masala GF",
-  description: "Masala GF food web app",
+  title: "uk Services",
+  description: "uk Services food web app",
 };
 
 export default function RootLayout({

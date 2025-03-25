@@ -9,8 +9,9 @@ import { SideCart } from "@/components/MiniCart/SideCart";
 import { BargerMenu } from "@/components/Bargermenu/Menu";
 import Footer from "@/components/Footer";
 
-import Cart from "@/components/CartBottom/CartBottom"
+import Cart from "@/components/CartBottom/CartBottom";
 import Modal from "./Components/Modal";
+import SideBarPublic from "@/components/SideBarPublic";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -29,13 +30,18 @@ export default function RootLayout({
           <CartProvider>
             <BargerMenu />
             <Modal />
-           
-            <SideCart />
             <Header />
-            {children}
-           
+            <div className="flex justify-center pt-10">
+              <div className="hidden lg:block lg:w-[350px]  mr-3">
+                <SideBarPublic />
+              </div>
+              <div className="w-full">{children}</div>
+            </div>
+
             <Footer />
-            <div className="sticky  bottom-4 flex justify-end pr-3 z-50"><Cart /></div> 
+            <div className="sticky  bottom-4 flex justify-end pr-3 z-50">
+              {/* <Cart /> */}
+            </div>
           </CartProvider>
         </SiteProvider>
       </body>

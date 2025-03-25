@@ -25,7 +25,7 @@ export async function upload(image) {
   const base64Data = Buffer.from(imageData).toString('base64');
   const fileUri = 'data:' + mime + ';' + encoding + ',' + base64Data;
   const result = await cloudinary.uploader.upload(fileUri, {
-    folder: 'masala-food',
+    folder: 'servicedirectoryuk',
   });
   return result.secure_url;
 }

@@ -54,19 +54,19 @@ export type TnewProductSchemaArr = TnewProductSchema[];
 //add for type
 
 const productSchema = z.object({
-  // id: z.number().optional(),
+  id: z.number().optional(),
   name: z
     .string()
     .trim()
     .min(2, { message: "Product name is very short" })
     .max(30, { message: "Product name is very long" }),
   price: z
-    .string()
-    .refine((value) => /^\d+$/.test(value), "Invalid product price"), // Refinement
+    .string().optional(),
+    //.refine((value) => /^\d+$/.test(value), "Invalid product price"), // Refinement
   sortOrder: z.string().min(1, { message: "Please select category" }),
 
   productDesc: z.string().min(1, { message: "Please select category" }),
-  company: z.string().min(1, { message: "Please select category" }),
+ // company: z.string().optional(),
   featured: z.string().optional(),
   image: typeof window === "undefined" ? z.any() : z.any(),
   baseProductId: z.string().optional(),

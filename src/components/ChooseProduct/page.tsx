@@ -149,7 +149,7 @@ let price = "";
 
               </div>
             </div>
-            <> {showMessage && <div className="z-50 text-red-500 w-full text-sm bg-slate-100 rounded-lg p-3">Wähle dein Flavour</div>}</>
+            <> {showMessage && <div className="z-50 text-red-500 w-full text-sm bg-slate-100 rounded-lg p-3"></div>}</>
             <div className="flex flex-col  flex-wrap ">
               {/* {productBase?.flavors&&productAddOn.map((product, i) => {
                 return (
@@ -198,7 +198,7 @@ let price = "";
                       onClick={()=>{setShowMessage(true)}} className='border px-3 py-3 rounded-full bg-blue-300'><IoMdAdd size={20} className="text-white "  /></button>}
                   </div>
 
-                <button className="px-2 py-1 bg-slate-200 rounded-md w-fit" onClick={()=>{addToCartL()}}>Hinzufügen</button>
+                <button className="px-2 py-1 bg-slate-200 rounded-md w-fit" onClick={()=>{addToCartL()}}>Add</button>
                
               </div>
             </div>
